@@ -1,5 +1,5 @@
 #include "bubblesort.h"
 
-void bubblesort(int *nums, int numsSize) {
+void bubblesort(int *arr, int arrSize) {
 
 }

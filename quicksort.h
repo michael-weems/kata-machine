@@ -3,6 +3,6 @@
 
 #include <stdlib.h>
 
-void bubblesort(int *arr, int arrSize);
+void quicksort(int *arr, int arrSize);
 
 #endif
