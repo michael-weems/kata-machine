@@ -5,7 +5,7 @@ clean:
 	rm -f *.out
 
 run: clean
-	gcc -o $(TARGET).out _tests.c $(TARGET).c $(TARGET)_tests.c 
+	gcc _tests.c $(TARGET).c $(TARGET)_tests.c -o $(TARGET).out -lm
 	./$(TARGET).out
 
 # Sorting

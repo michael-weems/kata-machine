@@ -54,6 +54,24 @@ int main(int argc, char *argv[]) {
 		errors += failInt(b_ex, b_re);
 	}
 	++tests;
+	
+	//////////////////////////////////////////////////////
+	// -1 when doesn't break
+	floors = 100;
+	bool c_in[floors];
+	for (i = 0; i < floors; ++i) {
+		c_in[i] = false;
+	}
+
+	int c_ex = -1;
+	int c_re = twocrystalballs(c_in, floors);
+
+	if (c_ex == c_re) {
+		pass("no floor where it breaks");
+	} else {
+		errors += failInt(c_ex, c_re);
+	}
+	++tests;
 
 	summary(errors, tests);
 	return 0;
