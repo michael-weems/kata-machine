@@ -1,3 +1,6 @@
 *.o
 *.out
 todo/
+bubblesort.c
+quicksort.c
+twocrystalballs.c

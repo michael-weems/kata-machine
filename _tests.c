@@ -43,6 +43,13 @@ int failInt(int expected, int received) {
 	return 1;
 }
 
+int failBool(bool expected, bool received) {
+	red();
+	printf("fail: expected %s - received %s\n", expected ? "true" : "false", received ? "true" : "false");
+	nocolor();
+	return 1;
+}
+
 void pass(char *msg) {
 	green();
 	printf("pass: %s\n", msg);
@@ -50,12 +57,17 @@ void pass(char *msg) {
 }
 
 void summary(int failed, int count) {
-	red();
+	if (failed > 0) {
+		red();
+	}
 	printf("%d failed", failed);
 	nocolor();
 	printf(" + ");
 	green();
 	printf("%d succeeded", count - failed);
-	nocolor();
+	if (failed > 0) {
+		nocolor();
+	}
 	printf(" / %d total tests\n", count);
+	nocolor();
 }

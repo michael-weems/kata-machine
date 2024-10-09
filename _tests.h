@@ -2,6 +2,7 @@
 #define TESTS_H
 
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdlib.h>
 
 // util functions
@@ -15,6 +16,7 @@ void nocolor();
 // generic fail functions
 int failArray(int input[], int expected[], int received[]); 
 int failInt(int expected, int received); 
+int failBool(bool expected, bool received); 
 
 // pass function
 void pass(char *msg); 
