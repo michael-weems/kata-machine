@@ -14,6 +14,7 @@ void nocolor();
 
 // generic fail functions
 int failArray(int input[], int expected[], int received[]); 
+int failInt(int expected, int received); 
 
 // pass function
 void pass(char *msg); 

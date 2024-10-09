@@ -5,7 +5,6 @@
 
 int main(int argc, char *argv[]) { 
 
-	// TODO: implement test cases
 	bool failed = false; 
 	int tests = 0;
 	int errors = 0;	

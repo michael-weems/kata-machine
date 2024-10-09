@@ -36,6 +36,13 @@ int failArray(int input[], int expected[], int received[]) {
 	return 1;
 }
 
+int failInt(int expected, int received) {
+	red();
+	printf("fail: expected %d - received %d\n", expected, received);
+	nocolor();
+	return 1;
+}
+
 void pass(char *msg) {
 	green();
 	printf("pass: %s\n", msg);
