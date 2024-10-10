@@ -124,6 +124,6 @@ int sortingTests(char *sortingStrategy) {
 	++tests;
 
 	summary(errors, tests);
-	return 0;
+	return errors > 0 ? 1 : 0;
 }
 

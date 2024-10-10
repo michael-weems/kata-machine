@@ -24,6 +24,12 @@ make bubblesort
 
 # or, more generally
 make <filename-without-extension>
+
+# example: good
+make linearsearch
+
+# example: bad
+make linearsearch_golden
 ```
 
 If you need a refresher, you can checkout an existing implementation in the `_golden.c` files.

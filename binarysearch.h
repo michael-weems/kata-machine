@@ -1,5 +1,5 @@
-#ifndef LIB_H
-#define LIB_H
+#ifndef BINARYSEARCHLIST_H
+#define BINARYSEARCHLIST_H
 
 #include <stdlib.h>
 #include <stdbool.h>

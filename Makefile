@@ -21,6 +21,10 @@ run: clean
 sort: TARGET=$(s)sort
 sort: run
 	rm -f *.out
+
+arraylist: TARGET=arraylist
+arraylist: run
+	rm -f *.out
 	
 # Search
 linearsearch: TARGET=linearsearch

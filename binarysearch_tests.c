@@ -67,6 +67,6 @@ int main(int argc, char *argv[]) {
 	++tests;
 
 	summary(errors, tests);
-	return 0;
+	return errors > 0 ? 1 : 0;
 }
 
