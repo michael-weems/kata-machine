@@ -2,6 +2,8 @@
 #include "_sorting.h"
 #include "_testutils.h"
 #include "bubblesort.h"
+#include "heapsort.h"
+#include "insertionsort.h"
 #include "mergesort.h"
 #include "quicksort.h"
 #include "selectionsort.h"
@@ -10,6 +12,12 @@ SortStrategy sortFactory(char *strategy) {
 	if (strcmp(strategy, "bubblesort") == 0) {
 		return &bubblesort;
 	}
+	if (strcmp(strategy, "heapsort") == 0) {
+		return &heapsort;
+	}
+	if (strcmp(strategy, "insertionsort") == 0) {
+		return &insertionsort;
+	}
 	if (strcmp(strategy, "mergesort") == 0) {
 		return &mergesort;
 	}
@@ -17,7 +25,7 @@ SortStrategy sortFactory(char *strategy) {
 		return &quicksort;
 	}
 	if (strcmp(strategy, "selection") == 0) {
-		return &quicksort;
+		return &selectionsort;
 	}
 
 	printf("error: strategy not recognized (%s)\n", strategy);
