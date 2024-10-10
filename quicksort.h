@@ -1,7 +1,5 @@
-#ifndef LIB_H
-#define LIB_H
-
-#include <stdlib.h>
+#ifndef QS_H
+#define QS_H
 
 void quicksort(int *arr, int arrSize);
 

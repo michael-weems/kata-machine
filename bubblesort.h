@@ -1,5 +1,5 @@
-#ifndef LIB_H
-#define LIB_H
+#ifndef BUBBLE_H
+#define BUBBLE_H
 
 #include <stdlib.h>
 

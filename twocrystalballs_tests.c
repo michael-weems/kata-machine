@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "_tests.h"
+#include "_testutils.h"
 #include "twocrystalballs.h"
 
 int main(int argc, char *argv[]) { 

@@ -1,4 +1,4 @@
-#include "_tests.h"
+#include "_testutils.h"
 
 void printArray(int arr[], int arrSize) {
 	printf("[");

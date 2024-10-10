@@ -1,22 +1,26 @@
+s=bubble
 TARGET=bubblesort
+TEST_FILES=$(filter $(wildcard *_tests.c), $(wildcard *.c))
+GOLDEN_FILES=$(filter $(wildcard *_golden.c), $(wildcard *.c))
+C_FILES=$(filter-out $(GOLDEN_FILES), $(filter-out $(TEST_FILES), $(wildcard *.c)))
 
 clean:
 	rm -f *.o
 	rm -f *.out
 
 run: clean
-	gcc _tests.c $(TARGET).c $(TARGET)_tests.c -o $(TARGET).out -lm
+	gcc $(C_FILES) $(TARGET)_tests.c -o $(TARGET).out -lm
 	./$(TARGET).out
 
-# Sorting
-bubblesort: TARGET=bubblesort
-bubblesort: run
+# sorting
+# usage: make sort s=quick
+#      : make sort s=merge
+#      : make sort s=bubble
+#      : make sort s=selection
+#      : etc...
+sort: TARGET=$(s)sort
+sort: run
 	rm -f *.out
-
-quicksort: TARGET=quicksort
-quicksort: run
-	rm -f *.out
-
 	
 # Search
 linearsearch: TARGET=linearsearch

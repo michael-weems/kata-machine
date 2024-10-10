@@ -2,5 +2,6 @@
 #include "_sorting.h"
 
 int main(int argc, char *argv[]) { 
-	return sortingTests("quicksort");
+	return sortingTests("mergesort");
 }
+
