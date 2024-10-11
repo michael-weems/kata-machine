@@ -9,7 +9,7 @@ clean:
 	rm -f *.out
 
 run: clean
-	gcc $(C_FILES) $(TARGET)_tests.c -o $(TARGET).out -lm
+	gcc -g $(C_FILES) $(TARGET)_tests.c -o $(TARGET).out -lm
 	./$(TARGET).out
 
 # sorting
@@ -26,6 +26,10 @@ arraylist: TARGET=arraylist
 arraylist: run
 	rm -f *.out
 	
+redblacktree: TARGET=redblacktree
+redblacktree: run
+	rm -f *.out
+
 # Search
 linearsearch: TARGET=linearsearch
 linearsearch: run

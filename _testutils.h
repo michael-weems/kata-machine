@@ -17,6 +17,7 @@ void nocolor();
 int failArray(int input[], int expected[], int received[]); 
 int failInt(int expected, int received); 
 int failBool(bool expected, bool received); 
+int fail(char *msg); 
 
 // pass function
 void pass(char *msg); 

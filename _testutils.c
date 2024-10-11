@@ -50,6 +50,13 @@ int failBool(bool expected, bool received) {
 	return 1;
 }
 
+int fail(char *msg) {
+	red();
+	printf("fail: %s\n", msg);
+	nocolor();
+	return 1;
+}
+
 void pass(char *msg) {
 	green();
 	printf("pass: %s\n", msg);
