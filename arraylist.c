@@ -32,7 +32,10 @@ void arraylist_append(Arraylist *list, int value) {
 	
 }
 
-void arraylist_insert(Arraylist *list, int value, int idx) {
+void arraylist_insert(Arraylist *list, int idx, int value) {
+	
+}
+void arraylist_update(Arraylist *list, int idx, int value) {
 	
 }
 

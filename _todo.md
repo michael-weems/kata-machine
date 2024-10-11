@@ -33,6 +33,6 @@
 - [ ] merge sort
 - [ ] selection sort
 - [ ] insertion sort
-- [ ] red black tree
+- [x] red black tree
 
 

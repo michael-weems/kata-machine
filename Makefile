@@ -11,6 +11,7 @@ clean:
 run: clean
 	gcc -g $(C_FILES) $(TARGET)_tests.c -o $(TARGET).out -lm
 	./$(TARGET).out
+	#valgrind -s --leak-check=yes ./$(TARGET).out
 
 # sorting
 # usage: make sort s=quick
@@ -24,6 +25,9 @@ sort: run
 
 arraylist: TARGET=arraylist
 arraylist: run
+	rm -f *.out
+hashmap: TARGET=hashmap
+hashmap: run
 	rm -f *.out
 	
 redblacktree: TARGET=redblacktree
