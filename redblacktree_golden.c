@@ -49,13 +49,13 @@ void rbtree_free(RBTree *tree) {
 	// TODO: walk the tree, freeing each node post-order
 }
 
-void printNode(int depth, RBNode *n) {
+void util_rbnode_print(int depth, RBNode *n) {
 	for (int i = 0; i < depth; ++i) {
 		printf("    ");
 	}
 	printf("%s (%d)\n",  n->red ? "R" : "B", n->key);
 }
-void printRBTree(RBTree *t, RBNode *n, int depth, int order) {
+void util_rb_print(RBTree *t, RBNode *n, int depth, int order) {
 	if (n == t->nil) {
 		for (int i = 0; i < depth; ++i) {
 			printf("    ");
@@ -65,15 +65,15 @@ void printRBTree(RBTree *t, RBNode *n, int depth, int order) {
 	}
 
 	if (order == -1) {
-		printNode(depth, n);
+		util_rbnode_print(n, depth);
 	}
-	printRBTree(t, n->l, depth + 1, order);
+	util_rb_print(t, n->l, depth + 1, order);
 	if (order == 0) {
-		printNode(depth, n);
+		util_rbnode_print(n, depth);
 	}
-	printRBTree(t, n->r, depth + 1, order);
+	util_rb_print(t, n->r, depth + 1, order);
 	if (order == 1) {
-		printNode(depth, n);
+		util_rbnode_print(n, depth);
 	}
 }
 

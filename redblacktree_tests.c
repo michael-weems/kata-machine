@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
 	int tests = 0;
 	int errors = 0;	
 
-	RBTree *tree = rbtree();
+	RBTree *tree = rbtree_create();
 
 	int n = 25;
 	int a[25] = {5000, 10, 20, 90, 30, 40, 6000, 50, 25, 15, 5, 900, 45, 35, 100, 60, 75, 80, 55, 500, 85, 300, 250, 330, 3500};
@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
 	}
 	
 	before = errors;
-	for (; i < dMax; ++i) {
+	for (; i <= dMax; ++i) {
 		bool re = rbtree_search(tree, a[i]);
 		if (re) {
 			errors += 1;

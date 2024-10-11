@@ -18,7 +18,7 @@ typedef struct {
 	RBNode *nil;
 } RBTree;
 
-RBTree *rbtree();
+RBTree *rbtree_create();
 void rbtree_free(RBTree *tree);
 
 void rbtree_insert(RBTree *tree, int value);
