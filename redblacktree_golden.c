@@ -35,7 +35,7 @@ void rbnode_free(RBNode *node) {
 	free(node);
 }
 
-RBTree *rbtree() {
+RBTree *rbtree_create() {
 	RBTree *tree = (RBTree *)malloc(sizeof(RBTree *));
 	tree->nil = rbnode(-1);
 	tree->root = tree->nil;
@@ -49,7 +49,7 @@ void rbtree_free(RBTree *tree) {
 	// TODO: walk the tree, freeing each node post-order
 }
 
-void util_rbnode_print(int depth, RBNode *n) {
+void util_rbnode_print(RBNode *n, int depth) {
 	for (int i = 0; i < depth; ++i) {
 		printf("    ");
 	}
