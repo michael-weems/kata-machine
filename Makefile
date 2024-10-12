@@ -39,6 +39,10 @@ linearsearch: TARGET=linearsearch
 linearsearch: run
 	rm -f *.out
 
+binarysearch: TARGET=binarysearch
+binarysearch: run
+	rm -f *.out
+
 # Simple problems
 twocrystalballs: TARGET=twocrystalballs
 twocrystalballs: run

@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
 	
 	//////////////////////////////////////////////////////
 	// find needle in size 10 array
-	int a_haystack[10] = {4,2,10,3,9,1,8,5,7,6};
+	int a_haystack[10] = {1,2,3,4,5,6,7,8,9,10};
 	int a_needle = 8;
 	bool a_ex = true;
 	bool a_re = binarysearch(a_haystack, 10, a_needle);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 	
 	//////////////////////////////////////////////////////
 	// find no needle
-	int b_haystack[10] = {4,2,10,3,9,1,8,5,7,6};
+	int b_haystack[10] = {1,2,3,4,5,6,7,8,9,10};
 	int b_needle = 40;
 	bool b_ex = false;
 	bool b_re = binarysearch(b_haystack, 10, b_needle);
