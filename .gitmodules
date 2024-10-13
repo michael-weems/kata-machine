@@ -1,0 +1,3 @@
+[submodule "tools/queue"]
+	path = tools/queue
+	url = git@github.com:michael-weems/kata-queue.git
