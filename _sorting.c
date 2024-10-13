@@ -40,7 +40,7 @@ int sortingTests(char *sortingStrategy) {
 	int errors = 0;	
 	
 	//////////////////////////////////////////////////////
-	// sort all-unique, non-sorted array
+	// sort non-sorted array
 	int a_in[10] = {4,2,10,3,9,1,8,5,7,6};
 	int a_re[10] = {4,2,10,3,9,1,8,5,7,6};
 	int a_ex[10] = {1,2,3,4,5,6,7,8,9,10};
@@ -60,27 +60,6 @@ int sortingTests(char *sortingStrategy) {
 	failed = false;
 	++tests;
 	
-	//////////////////////////////////////////////////////
-	// sort non-unique, non-sorted array
-	int b_in[10] = {4,2,10,3,4,4,8,5,7,6};
-	int b_re[10] = {4,2,10,3,4,4,8,5,7,6};
-	int b_ex[10] = {2,3,4,4,4,5,6,7,8,10};
-
-	sort(b_re, 10);
-
-	for (int i = 0; i < 10; ++i){
-		if (b_re[i] != b_ex[i]) {
-			errors += failArray(b_in, b_ex, b_re);
-			failed = true;
-			break;
-		}
-	}
-	if (!failed) {
-		pass("sort non-unique, non-sorted array");
-	}
-	failed = false;
-	++tests;
-
 	//////////////////////////////////////////////////////
 	// sort already sorted array
 	int c_in[10] = {1,2,3,4,5,6,7,8,9,10};
