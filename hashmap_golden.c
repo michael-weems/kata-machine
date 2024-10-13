@@ -71,12 +71,12 @@ bool hashmap_has(HashMap *map, int key) {
 	return true;
 }
 void hashmap_set(HashMap *map, int key, int value) {
-	map->size = map->size + 1;
 	int bucket = hashmap_index(map, key);
 	int existing_index = al_index_of(map->buckets[bucket], key);
 	if (existing_index != -1 && existing_index % 2 == 0) {
 		al_update(map->buckets[bucket], existing_index+1, value);
 	} else {
+		map->size = map->size + 1;
 		al_append(map->buckets[bucket], key);
 		al_append(map->buckets[bucket], value);
 	}
