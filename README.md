@@ -8,7 +8,11 @@ Practice writing and re-writing Data Structures and Algorithms.
 
 TODO: ensure people can just pull this down and run it
 ```bash
-sudo apt install gcc
+sudo apt install gcc # todo: add necessary dependency installation here
+
+git submodule init
+git submodule update --remote tools/queue
+./init
 ```
 
 ### How to practice
@@ -33,6 +37,32 @@ make linearsearch_golden
 ```
 
 If you need a refresher, you can checkout an existing implementation in the `_golden.c` files.
+
+### Utilities
+
+If you want to utilize a psuedo-random queue of katas, you're free to use the tool located at `tools/queue`.
+
+Example usage:
+
+```bash
+# NOTE: only have to run this once, unless the submodule updates
+./init
+
+# get next kata to do
+./kq -f ./kata.db -d
+
+# generate new queue of katas to perform
+./kq -f ./kata.db -g
+
+# add a new kata to the database
+./kq -f ./kata.db -a "text description of kata"
+
+# list all katas available 
+./kq -f ./kata.db -k
+
+# list all "on-deck" katas in your queue
+./kq -f ./kata.db -q
+```
 
 ### Cleaning up
 
