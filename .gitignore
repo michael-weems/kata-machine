@@ -4,3 +4,7 @@ todo/
 bubblesort.c
 quicksort.c
 twocrystalballs.c
+heapsort.c
+hashmap.c
+kq
+*.db
