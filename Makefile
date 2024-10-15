@@ -23,13 +23,16 @@ sort: TARGET=$(s)sort
 sort: run
 	rm -f *.out
 
+# Data Structures
 arraylist: TARGET=arraylist
 arraylist: run
 	rm -f *.out
 hashmap: TARGET=hashmap
 hashmap: run
 	rm -f *.out
-	
+singlylinkedlist: TARGET=singlylinkedlist
+singlylinkedlist: run
+	rm -f *.out
 redblacktree: TARGET=redblacktree
 redblacktree: run
 	rm -f *.out
