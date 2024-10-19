@@ -2,10 +2,10 @@
 
 - [ ] HashMap
 - [ ] RandomSet
-- [ ] Doubly-Linked List
-- [ ] Singly-Linked List
+- [x] Doubly-Linked List
+- [x] Singly-Linked List
 - [ ] Trie
-- [ ] MinHeap
+- [x] MinHeap
 - [ ] MaxHeap
 - [ ] LRU
 - [ ] AVL Tree
@@ -34,5 +34,4 @@
 - [ ] selection sort
 - [ ] insertion sort
 - [x] red black tree
-
 
