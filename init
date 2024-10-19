@@ -4,5 +4,5 @@ pushd tools/queue
 make init
 popd
 cp tools/queue/bin/kq kq
-cp tools/queue/kata.db kata.db
+cp tools/queue/kata.db kq.db
 
