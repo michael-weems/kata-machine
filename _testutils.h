@@ -7,6 +7,7 @@
 
 // util functions
 void printArray(int arr[], int arrSize);
+int expect_array(int *expected, int *actual, int arrLength);
 
 // color printing
 void red();

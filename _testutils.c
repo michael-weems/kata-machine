@@ -1,5 +1,9 @@
 #include "_testutils.h"
 
+#define RED "\033[0;31m"
+#define GREEN "\033[0;32m"
+#define NOCOLOR "\033[0m"
+
 void printArray(int arr[], int arrSize) {
 	printf("[");
 	for (int i = 0; i < arrSize; ++i) {
@@ -10,17 +14,64 @@ void printArray(int arr[], int arrSize) {
 	}
 	printf("]");
 }
+int expect_array(int *expected, int *actual, int arrLength) {
+	int errors = 0;
+
+	for (int i = 0; i < arrLength; ++i) {
+		if (expected[i] != actual[i]) {
+			++errors;
+		} 
+	}
+
+	if (errors == 0) {
+		printf("%spass:%s ", GREEN, NOCOLOR);
+		printArray(actual, arrLength);
+		printf("\n");
+		return 0;
+	}
+
+	printf("%sfail:%s\nexpected: [", RED, NOCOLOR);
+	for (int i = 0; i < arrLength; ++i) {
+		if (expected[i] != actual[i]) {
+			printf("%s%d%s", GREEN, expected[i], NOCOLOR);
+		} else {
+			printf("%d", expected[i]);
+		}
+
+		if (i < arrLength-1){
+			printf(", ");
+		}
+	}
+	printf("]\n");
+
+	printf("  actual: [");
+	for (int i = 0; i < arrLength; ++i) {
+		if (expected[i] != actual[i]) {
+			printf("%s%d%s", RED, actual[i], NOCOLOR);
+			++errors;
+		} else {
+			printf("%d", actual[i]);
+		}
+
+		if (i < arrLength-1){
+			printf(", ");
+		}
+	}
+	printf("]\n\n");
+
+	return errors;
+}
 
 void red() {
-	printf("\033[0;31m");
+	printf(RED);
 }
 
 void green() {
-	printf("\033[0;32m");
+	printf(GREEN);
 }
 
 void nocolor() {
-	printf("\033[0m");
+	printf(NOCOLOR);
 }
 
 int failArray(int input[], int expected[], int received[]) {

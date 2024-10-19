@@ -30,6 +30,9 @@ arraylist: run
 hashmap: TARGET=hashmap
 hashmap: run
 	rm -f *.out
+minheap: TARGET=minheap
+minheap: run
+	rm -f *.out
 singlylinkedlist: TARGET=singlylinkedlist
 singlylinkedlist: run
 	rm -f *.out

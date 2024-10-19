@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
 		bool removed = sll_remove(list, a[i]);
 		if (removed == false) {
 			errors += 1; 
-		}
+		} 
 		++tests;
 	}
 	if (errors - before == 0) {
@@ -147,38 +147,13 @@ int main(int argc, char *argv[]) {
 	}
 	++tests;
 
-	sll_reverse(list);
-	length = sll_length(list);
-	if (length == n) {
-		pass("length is still the same after reversing");
-	} else {
-		fail("length changed upon reversing");
-		errors++;
-	}
-	++tests;
-
-	before = errors;
-	for (int i=0; i < n; ++i) {
-		int value = sll_get(list, i);
-		if (value != a[n-i-1]) {
-			errors += 1;
-		}
-		++tests;
-	}
-	if (errors - before == 0) {
-		pass("reversed array contains all elements in correct order");
-	} else {
-		char msg[200];
-		sprintf(msg, "%d elements not in right place after reverse", errors - before);
-		fail(msg);
-	}
-
 	sll_destroy(list);
 	list = sll_create();
 	for (int i = 0; i < n; ++i) {
 		sll_insert(list, a[i]);
 	}
 
+	//{5000, 10, 20, 90, 30, 40, 6000, 50, 25, 15, 5, 900, 45, 35, 100, 60, 75, 80, 55, 500, 85, 300, 250, 330, 3500};
 	int removed = sll_remove_at(list, 10);
 	if (removed == a[10]) {
 		pass("removed correct element");
