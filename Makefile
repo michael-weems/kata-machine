@@ -36,6 +36,9 @@ minheap: run
 singlylinkedlist: TARGET=singlylinkedlist
 singlylinkedlist: run
 	rm -f *.out
+doublylinkedlist: TARGET=doublylinkedlist
+doublylinkedlist: run
+	rm -f *.out
 redblacktree: TARGET=redblacktree
 redblacktree: run
 	rm -f *.out
