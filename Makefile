@@ -39,6 +39,9 @@ singlylinkedlist: run
 doublylinkedlist: TARGET=doublylinkedlist
 doublylinkedlist: run
 	rm -f *.out
+bst: TARGET=bst
+bst: run
+	rm -f *.out
 redblacktree: TARGET=redblacktree
 redblacktree: run
 	rm -f *.out
