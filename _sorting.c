@@ -24,7 +24,7 @@ SortStrategy sortFactory(char *strategy) {
 	if (strcmp(strategy, "quicksort") == 0) {
 		return &quicksort;
 	}
-	if (strcmp(strategy, "selection") == 0) {
+	if (strcmp(strategy, "selectionsort") == 0) {
 		return &selectionsort;
 	}
 
