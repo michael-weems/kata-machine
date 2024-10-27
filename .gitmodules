@@ -1,3 +1,6 @@
 [submodule "tools/queue"]
 	path = tools/queue
 	url = git@github.com:michael-weems/kata-queue.git
+[submodule "primeagen-js-katas"]
+	path = primeagen-js-katas
+	url = git@github.com:ThePrimeagen/kata-machine.git

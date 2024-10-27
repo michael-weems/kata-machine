@@ -1,4 +1,4 @@
-# Kata Machine - Work in Progress
+# DSA Katas - Work in Progress
 
 Practice writing and re-writing Data Structures and Algorithms.
 
